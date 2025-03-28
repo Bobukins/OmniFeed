@@ -1,0 +1,16 @@
+{
+    "login": "your_email",
+    "password": "your_password",
+    "max_posts": 1000,
+    "scheduled_time": "00:00",
+    "fb_url": "https://www.facebook.com/your_page",
+    "fb_profiles": "fb_profiles.csv",
+    "fb_posts": "fb_posts.csv",
+    "inst_url": "https://www.instagram.com/your_page",
+    "inst_profiles": "inst_profiles.csv",
+    "inst_posts": "inst_posts.csv",
+    "twX_url": "https://www.x.com/your_page",
+    "twX_profiles": "twX_profiles.csv",
+    "twX_posts": "twX_posts.csv",
+    "output_dir": "./data/raw"
+}
