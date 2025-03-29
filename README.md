@@ -16,8 +16,7 @@ An application with a cross-platform intelligent recommendation system based on 
 ---
 
 ### **Technologies**
-- **Schedule**: for planning tasks
-- **Selenium**: for data collection
 - **Optuna**: for tuning hyperparameters
+- **spaCy**: used for advanced text processing and analysis
 - **CatBoost**: prediction and ranks the most popular and similar content
 - **PyTorch**: reduces the search space to the most relevant options using embedding in an ensemble model based on transformers
