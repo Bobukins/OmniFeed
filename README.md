@@ -16,6 +16,20 @@ An application with a cross-platform intelligent recommendation system based on 
 ### **Bonus Feature**
 - Added transformer model based on the T5 architecture, which can determine the tone and emotions of the comments
 
+Inupt:
+| Comments |
+|--------------------------|
+| Absolutely wonderful - silky and sexy and comfortable |
+| I love, love, love this jumpsuit... |
+| This shirt is very flattering to all... |
+
+Output:
+| Comments | Emotion |
+|--------------------------|---------|
+| Absolutely wonderful - silky and sexy and comfortable | Joy |
+| I love, love, love this jumpsuit... | Joy |
+| This shirt is very flattering to all... | Love |
+
 
 ---
 
