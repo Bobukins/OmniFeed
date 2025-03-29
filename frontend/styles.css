@@ -1,0 +1,506 @@
+@font-face {
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    src:local(),
+    url('./font/Play-Regular.ttf')
+}
+
+
+body{
+    font-family: 'Play';
+    padding: 0;
+    margin: 0;
+    display: flex;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+.allallbody{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.allBody{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1900px;
+    flex: 12;
+}
+
+.mainPage{
+    display: flex;
+
+}
+
+.mainBodyRight{
+    flex:1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav{  
+    background-color: #37383B;
+    height: 964px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    position: fixed;
+}
+
+.navTop{
+    flex: 9;
+}
+
+.navBottom{
+    flex:2;
+}
+
+.nav span{
+    padding: 26px 0;
+    margin-bottom: 20px;
+}
+
+.nav div{
+    text-align: center;
+    padding: 0 4px;
+}
+
+.nav div p{
+    margin-top: 0;
+    color: #fff;
+    opacity: 60%;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+
+.main{
+    flex: 1;
+    padding:8px 20px;
+    flex-wrap: wrap;
+    display: flex;
+    margin-left: 100px;
+}
+
+.hrMain{
+    margin: 10px 0 10px -20px;
+    width: 100%;
+    padding-right: 990px;
+    height: 0;
+}
+
+.main_nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 6;
+}
+
+.search{
+    flex: 9;
+}
+
+.navTop hr{
+    width: 100%;
+    padding: 0 3px;
+    margin-left: -4px;
+    border-color: #A5A5A5;
+}
+
+.navBottom hr{
+    width: 100%;
+    padding: 0 3px;
+    margin-left: -4px;
+    border-color: #A5A5A5;
+}
+
+.search img{
+    margin-bottom: -10px;
+    margin-left: -50px;
+}
+
+.search input{
+    width: 40%;
+    height: 40px;
+    top: 14px;
+    left: 125px;
+    border-radius: 14px;
+    border: 0;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding: 0 56px 0 20px;
+}
+
+.search input::placeholder{
+    color: #b1b1b1;
+    font-family: 'Play';
+    font-size: 16px;
+}
+
+.notificationAccount{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.notificationAccount img{
+    height: 50px;
+    margin-bottom: -26px;
+}
+
+.notificationAccount hr{
+    width: 0px;
+    height: 30px;
+    padding: 16px 0;
+    border: #A5A5A5 solid 0.1px;
+    margin: -10px 0;
+}
+
+
+.areYouAuth{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+.areYouAuthBtn{
+    flex: 2;
+    background-color: #F90043;
+    text-align: center;
+    align-content: center;
+    height: 64px;
+    color: #FFF;
+    border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.areYouAuth_addAccount{
+    flex: 8;
+    display: flex;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    text-align: start;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    height: 64px;
+    margin-left: 16px;
+    padding: 0 20px 0 30px;
+}
+
+.areYouAuth_addAccount img{
+    width: 52px;
+    height: 38px;
+}
+
+.areYouAuth_addAccount div{
+    display: flex;
+}
+
+.areYouAuth_addAccountTxt{
+    flex-direction: column;
+    height: 30px;
+    margin-top: -20px;
+    margin-left: 30px;
+}
+
+.areYouAuth_addAccountTxt h5{
+    margin-bottom: 6px;
+    font-size: 20px;
+    margin-top: 14px;
+}
+
+.areYouAuth_addAccount button{
+    background-color: #F90043;
+    border: 0;
+    color: #fff;
+    padding: 10px 40px;
+    font-family: 'Play';
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+.calendarBlock {
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+#monthYear{
+    color: #F90043;
+}
+
+.calendar{
+    justify-content: space-between;
+    text-align: center;
+    width: 280px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day {
+    padding: 10px;
+    border-radius: 50%;
+}
+
+
+.stats{
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+}
+
+.numViews{
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 280px;
+    margin: 5px 20px 5px 0;
+}
+
+.numViewsTxt h4{
+    font-size: 14px;
+    color: #000;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+.numViewsCount{
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #12B400;
+    justify-content: space-between;
+    width: 280px;
+} 
+
+.numViewsCount p{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #000;
+    margin: 0;
+}
+
+.numViewsCount p img {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+
+.allStats{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.secStatistic{
+    display: flex;
+}
+
+.secStatistic {
+    display: flex;
+    justify-content: space-between;
+    width: 330px;
+}
+
+.secStatisticViews{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    color: #12B400;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.secStatisticViews h5{
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.secStatisticViews1 h5{
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.lastseen{
+    flex-direction: row;
+    display: flex;
+}
+
+.lastSeen h5{
+    margin-bottom: 0;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.lastSeenFirtsBlock{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+    height: 200px; /* Чтобы была прокрутка */
+    width: auto;
+    overflow-x: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    scrollbar-width: none;
+    margin-bottom: 0;
+}
+
+.lastseenCard{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    max-width: 200px;
+    margin: 0 10px;
+    border: #eeeeee solid 1px;
+    padding: 20px 20px 5px 20px;
+}
+
+.lastseenCard div{
+    display: flex;
+    height: 50px;
+    width: 500px;
+}
+
+.lastseenCard div img{
+    height: 40px;
+    margin-right: 10px;
+}
+
+.lastseenCard div p{
+    margin-top: 0;
+}
+
+.lastseenCard a{
+    margin-top: 10px;
+    height: 40px;
+    background-color: #dddddd;
+    border: 0;
+    border-radius: 20px;
+    color: #147aff;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    align-content: center;
+}
+
+.lastSeen{
+    flex-direction: row;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 1380px;
+    flex: 2;
+    border-radius: 10px;
+    margin-top: -100px;
+    margin-left: 10px;
+    height: 250px;
+}
+
+.lastSeenFirtsBlock {
+    list-style: none;
+    --_animation: slide-in-from-left; 
+}
+
+.lastseenCard {
+    animation: var(--_animation) 1s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 50% exit 100%;
+}
+
+
+
+
+
+.stat img{
+    width: 88px;
+    height: 88px;
+    margin-right: 10px;
+    align-self: center;
+}
+
+.stat h4{
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.stat p{
+    font-size: 15px;
+} 
+
+
+ .lastStats {
+    height: 300px; 
+    width: 300px;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    scrollbar-width: none;
+  }
+
+  .stats {
+    list-style: none;
+    padding: 10px;
+    --_animation: slide-in-from-left; 
+  } 
+
+  .stats > li {
+    padding: 15px;
+    width: 266px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 18px;
+
+    animation: var(--_animation) 1s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 50% exit 100%;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+
+  @keyframes slide-in-from-left {
+    from {
+      transform: translateX(0%);
+
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+
+
