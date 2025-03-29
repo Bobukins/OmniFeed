@@ -14,7 +14,7 @@ An application with a cross-platform intelligent recommendation system based on 
 
 
 ### **Bonus Feature**
-- Added transformer model based on the T5 architecture, which can determine the tone and emotions of the comments.
+- Added transformer model based on the T5 architecture, which can determine the tone and emotions of the comments
 
 
 ---
