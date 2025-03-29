@@ -13,6 +13,10 @@ An application with a cross-platform intelligent recommendation system based on 
 - Expansion: we are aware of the frequent problems that exist in RecSys tasks, so we wrote the modular project code in advance so that we could later plug the .enhance module
 
 
+### **Bonus Feature**
+- Added transformer model based on the T5 architecture, which can determine the tone and emotions of the comments.
+
+
 ---
 
 ### **Technologies**
