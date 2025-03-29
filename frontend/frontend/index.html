@@ -1,0 +1,325 @@
+<?php session_start()?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <title>on my feed</title>
+    <link rel="stylesheet" href="./styles.css">
+   
+</head>
+<body>
+    <div class="nav">
+        <span>AVAVAVAVA</span>
+        <div class="navA">
+            <div class="navTop">
+                <a href="#" class="nav-item">
+                    <img src="./img/loopNav.png" alt="loopNav"/>
+                    <p>Рекомендации</p>
+                </a>
+                <hr>
+                <a href="#" class="nav-item">
+                    <img src="./img/graphNav.png" alt="graphNav"/>
+                    <p>Статистика</p>
+                </a>
+                <hr>
+                <a href="#" class="nav-item">
+                    <img src="./img/messageNav.png" alt="messageNav"/>
+                    <p>Чат-Бот</p>
+                </a>
+                <hr>
+            </div>
+            <div class="navBottom">
+                <a href="#" class="nav-item">
+                    <img src="./img/Wallet.png" alt="profile"/>
+                    <p>Личный кабинет</p>
+                </a>
+                <hr>
+                <a href="#" class="nav-item">
+                    <img src="./img/Wallet.png" alt="messageNav"/>
+                    <p>Тарифы</p>
+                </a>
+            </div>
+        </div>
+    </div> 
+
+
+    <div class="main">
+        <form class="main_nav" method="POST">
+            <div class="search" name="search">
+                <input placeholder="Кто вас интерисует?"/>
+                <img src="./img/Search.png" alt="loop"/>
+            </div>
+            <div class="notificationAccount">
+                    <div class="notificationAccountBell">
+                        <img src="./img/Notification.png" alt="bell"/>
+                        <p id="notificationCount"></p>
+                    </div>
+                    <hr class="notificationAccountHR"/>
+                    <img src="./img/Male User.png" alt="accountIcon"/>
+            </div>
+        </form>
+
+        <hr class="hrMain"/>
+
+
+
+
+        
+        <?php
+        $userID =true;
+        if(!$userID){
+            ?>
+            <div class="areYouAuth">
+                <a class="areYouAuthBtn" href="./index.html">Настроить виджеты</a>
+                <div class="areYouAuth_addAccount">
+                    <div>
+                        <img src="./img/Stars.png" alt="stars"/>
+                        <div class="areYouAuth_addAccountTxt">
+                            <h5>Добавьте аккаунт, чтобы увидеть статистику</h5>
+                            <label>С помощью нее вы сможете увидеть свои охваты и потенциальных конкурентов</label>
+                        </div>
+                    </div>
+                    <button>Добавить аккаунт</button>
+                </div>
+            </div>
+            <?php
+        }
+        ?>
+        <div class="allallbody">
+        <div class="allBody">
+            <div class="allStats">
+            <div class="allStatsA">
+                <h2>Сводка статистики</h2>
+                <div class="statsA">
+                    <form class="numViews" method="POST">
+                        <div class="numViewsTxt">
+                            <h4>КОЛИЧЕСТВО ПРОСМОТРОВ</h4>
+                            <div class="numViewsCount">
+                                <label name="numberOfViews1">174 543.09</label>
+                                <p>+154<img src="./img/🔥.png"></p>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="numViews" method="POST">
+                        <div class="numViewsTxt">
+                            <h4>КОЛИЧЕСТВО ПРОСМОТРОВ</h4>
+                            <div class="numViewsCount">
+                                <label name="numberOfViews2">174 543.09</label>
+                                <p>+154<img src="./img/🔥.png"></p>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="numViews" method="POST">
+                        <div class="numViewsTxt">
+                            <h4>КОЛИЧЕСТВО ПРОСМОТРОВ</h4>
+                            <div class="numViewsCount">
+                                <label name="numberOfViews3">174 543.09</label>
+                                <p>+154<img src="./img/🔥.png"></p>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="numViews" method="POST">
+                        <div class="numViewsTxt">
+                            <h4>КОЛИЧЕСТВО ПРОСМОТРОВ</h4>
+                            <div class="numViewsCount">
+                                <label name="numberOfViews4">174 543.09</label>
+                                <p>+154<img src="./img/🔥.png"></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div>
+                <h2>Подходящие темы для публикаций</h2>
+                <div class="statsA">
+                    <form class="numViews" method="POST">
+                        <div class="secStatistic">
+                            <div class="secStatisticViews1">
+                                <h5>Тема</h5>
+                                <p name="theme5">Цветочный маркет</p>
+                                <p name="theme6">Праздник</p>
+                                <p name="theme7">Поздравления</p>
+                            </div>
+                            <div class="secStatisticViews">
+                                <h5>Просмотры</h5>
+                                <label name="numberOfViews1">+35%</label>
+                                <label name="numberOfViews2">+35%</label>
+                                <label name="numberOfViews3">+35%</label>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="numViews" method="POST">
+                        <div class="secStatistic">
+                            <div class="secStatisticViews1">
+                                <h5>Тема</h5>
+                                <p name="theme8">Цветочный маркет</p>
+                                <p name="theme9">Праздник</p>
+                                <p name="theme10">Поздравления</p>
+                            </div>
+                            <div class="secStatisticViews">
+                                <h5>Просмотры</h5>
+                                <label name="numberOfViews1">+35%</label>
+                                <label name="numberOfViews2">+35%</label>
+                                <label name="numberOfViews3">+35%</label>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+        <form class="lastSeen" method="POST">
+            <h5>Недавно просмотренные</h5>
+            <ul class="lastSeenFirtsBlock">
+                <li class="lastseenCard">
+                    <div>
+                        <img src="./img/🔥.png" alt="h"/>
+                        <p><span style="color: #000;" name="nameAccLast1">blumcrypto</span><br>
+                        <span style="color: rgb(114, 114, 114);" name="nameAccLastSubs1">29.1M</span> подписчиков
+                        </p>
+                    </div>
+                    <a href="#">Добавить</a>
+                </li>
+                <li class="lastseenCard">
+                    <div>
+                        <img src="./img/🔥.png" alt="h"/>
+                        <p><span style="color: #000;" name="nameAccLast1">blumcrypto</span><br>
+                        <span style="color: rgb(114, 114, 114);" name="nameAccLastSubs1">29.1M</span> подписчиков
+                        </p>
+                    </div>
+                    <a href="#">Добавить</a>
+                </li>
+                <li class="lastseenCard">
+                    <div>
+                        <img src="./img/🔥.png" alt="h"/>
+                        <p><span style="color: #000;" name="nameAccLast1">blumcrypto</span><br>
+                        <span style="color: rgb(114, 114, 114);" name="nameAccLastSubs1">29.1M</span> подписчиков
+                        </p>
+                    </div>
+                    <a href="#">Добавить</a>
+                </li>
+                <li class="lastseenCard">
+                    <div>
+                        <img src="./img/🔥.png" alt="h"/>
+                        <p><span style="color: #000;" name="nameAccLast1">blumcrypto</span><br>
+                        <span style="color: rgb(114, 114, 114);" name="nameAccLastSubs1">29.1M</span> подписчиков
+                        </p>
+                    </div>
+                    <a href="#">Добавить</a>
+                </li>
+                <li class="lastseenCard">
+                    <div>
+                        <img src="./img/🔥.png" alt="h"/>
+                        <p><span style="color: #000;" name="nameAccLast1">blumcrypto</span><br>
+                        <span style="color: rgb(114, 114, 114);" name="nameAccLastSubs1">29.1M</span> подписчиков
+                        </p>
+                    </div>
+                    <a href="#">Добавить</a>
+                </li>
+                <li class="lastseenCard">
+                    <div>
+                        <img src="./img/🔥.png" alt="h"/>
+                        <p><span style="color: #000;" name="nameAccLast1">blumcrypto</span><br>
+                        <span style="color: rgb(114, 114, 114);" name="nameAccLastSubs1">29.1M</span> подписчиков
+                        </p>
+                    </div>
+                    <a href="#">Добавить</a>
+                </li>
+                <li class="lastseenCard">
+                    <div>
+                        <img src="./img/🔥.png" alt="h"/>
+                        <p><span style="color: #000;" name="nameAccLast1">blumcrypto</span><br>
+                        <span style="color: rgb(114, 114, 114);" name="nameAccLastSubs1">29.1M</span> подписчиков
+                        </p>
+                    </div>
+                    <a href="#">Добавить</a>
+                </li>
+                
+            </ul>
+        </form>
+        
+        
+        
+
+
+    </div>
+
+
+
+
+        <div class="mainBodyRight" name="mainBody">
+            <form class="calendarBlock" method="POST">
+                <div class="navCal">
+                    <h2 id="monthYear">Апрель 2025</h2>
+                </div>
+                <div class="calendar">
+                    <div>пн</div><div>вт</div><div>ср</div><div>чт</div><div>пт</div><div>сб</div><div>вс</div>
+                </div>
+                <div class="calendar" id="days"></div>
+                
+                <script src="./main.js"></script>
+            </form>
+            <h1>Полезные статьи</h1>
+            <form class="lastStats" method="POST">
+
+                <ul class="stats">
+                    <li class="stat">
+                        <img src="./img/image 22.png" alt="" name="statPhoto1"/>
+                        <div>
+                            <h5 name="statHeader">Час пробил: в какое время публиковать посты в разных соцсетях, чтоб «залетели»</h5>
+                            <p name="stattxt">Как запрещённые, так и разрешённые в России соцсети кричат начинающему блогеру....</p>
+                        </div>
+                    </li>
+                    <li class="stat">
+                        <img src="./img/image 22.png" alt="" name="statPhoto1"/>
+                        <div>
+                            <h5 name="statHeader">Час пробил: в какое время публиковать посты в разных соцсетях, чтоб «залетели»</h5>
+                            <p name="stattxt">Как запрещённые, так и разрешённые в России соцсети кричат начинающему блогеру....</p>
+                        </div>
+                    </li>
+                    <li class="stat">
+                        <img src="./img/image 22.png" alt="" name="statPhoto1"/>
+                        <div>
+                            <h5 name="statHeader">Час пробил: в какое время публиковать посты в разных соцсетях, чтоб «залетели»</h5>
+                            <p name="stattxt">Как запрещённые, так и разрешённые в России соцсети кричат начинающему блогеру....</p>
+                        </div>
+                    </li>
+
+                    
+                    
+                </ul>
+            </form>
+        </div>
+
+    </div>
+
+
+ 
+
+
+
+        
+
+    
+    
+    
+    
+    
+    
+    
+   
+        
+        
+        
+    
+    </div>
+
+</body>
+</html>
