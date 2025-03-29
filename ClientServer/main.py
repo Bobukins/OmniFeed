@@ -15,7 +15,7 @@ from db import *
 
 
 #
-app = FastAPI()
+app = FastAPI(root_path="/")
 
 # TODO: develop a security policy afterwards for browser rendering
 app.add_middleware(
