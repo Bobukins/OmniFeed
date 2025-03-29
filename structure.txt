@@ -7,7 +7,7 @@ OnMyFeed/
 │   └── THIRD_PARTY_NOTICES.chromedriver
 │
 │
-├── config.py 			   # Конфигурационные настройки
+├── config.py 			 # Конфигурационные настройки
 ├── main.py 			   # Главный скрипт
 │
 │
