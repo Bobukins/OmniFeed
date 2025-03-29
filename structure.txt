@@ -1,0 +1,61 @@
+OnMyFeed/
+│
+│
+├── chromedriver/                  # Драйвер
+│   ├── chromedriver.exe
+│   ├── LICENSE.chromedriver
+│   └── THIRD_PARTY_NOTICES.chromedriver
+│
+│
+├── config.py 			   # Конфигурационные настройки
+├── main.py 			   # Главный скрипт
+│
+│
+│
+├── data/                          # Данные проекта
+│   ├── data_description.txt       	
+│   ├── draft/
+│   ├── raw/
+│   └── result/
+│
+│
+├── etl/                           # Препроцессинг
+│   ├── __init__.py
+│   ├── extract.py
+│   ├── transform.py
+│   ├── load.py
+│   └── run_pipline.py
+│
+│
+├── modeling/                      # Модели RecSys
+│   ├── __init__.py
+│   ├── mpnet_sampling.py
+│   ├── emotion_analysis.py
+│   ├── catboost_ranking.py
+│   └── run_modeling.py
+│
+│
+├── models/                        # Файлы моделей и их параметры
+│   ├── spacy_model_en
+│   ├── spacy_model_ru
+│   ├── catboost_info
+│   ├── t5-base-finetuned-emotion
+│   ├── bert_base_multilingual_cased
+│   └── paraphrase-multilingual-mpnet-base-v2
+│
+│
+├── scraping/                       # Веб-скрейпинг
+│   ├── __init__.py
+│   ├── settings.json
+│   ├── scr_config.py
+│   ├── scr_base.py
+│   ├── scr_net.py
+│   └── scheduler_run.py
+│
+│
+├── requirements.txt               # Зависимости
+├── structure.txt                  # Структуры
+│
+│
+├── .gitattributes
+└── README.md

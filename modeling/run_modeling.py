@@ -48,9 +48,10 @@ class ModelingPipeline:
 
         print("Запуск ранжирования...")
         top_5_posts = self.run_ranking(results_df)
+        top_5_posts = top_5_posts[["url", "autor_name"]]
 
         os.makedirs(self.result_dir, exist_ok=True)
-        output_path = os.path.join(self.result_dir, "final_data.csv")
+        output_path = os.path.join(self.result_dir, "final_recs.csv")
         top_5_posts.to_csv(output_path, index=False)
 
         print(f"Файл с топ-5 кандидатами сохранен в {output_path}")
@@ -58,6 +59,6 @@ class ModelingPipeline:
 
 # from etl import PostRanker
 # # Запуск
-# if __name__ == "__main__":
-#     pipeline = ModelingPipeline()
-#     pipeline.run_pipeline()
+if __name__ == "__main__":
+    pipeline = ModelingPipeline()
+    pipeline.run_pipeline()

@@ -1,1 +1,41 @@
-# Написать описание фичей
+## Citation Request:
+This dataset is publicly available for research purposes. Please include the following citation if you use this dataset:
+
+**Authors**: Iquarium Hackathon team "Ai-Raws"
+**Dataset Title**: "OnMyFeed"
+
+---
+
+1. **Title**: On My Feed
+
+2. **Sources**:
+   Created by: Ai-Raws.
+
+3. **Past Usage**:
+   This dataset is designed for marketers and SMM specialists to analyze dynamic data from different social networks and platforms. 
+Including: engagement coverage of posts, popular topics and trends, the audience and its behavior.
+
+6. **Number of Rows**: 2999 observations (expandable based on additional data collection).
+
+7. **Number of Attributes**: 15 attributes.
+   Note: Some attributes may be correlated, making feature selection potentially useful.
+
+8. **Attribute Information**:
+   1. **post_id**: Unique identifier for each post.
+   2. **url**: URL of the post, typically linking to the online platform.
+   3. **date**: Publication date of the post in YYYY-MM-DD-HH-MM format.
+   4. **photos**: Links to photos within the post (string representation).
+   5. **text**: Content of the post, including any written description or message.
+   6. **hashtags**: List of hashtags associated with the post.
+   7. **views**: The number of views the post received.
+   8. **likes**: The number of likes received for the post.
+   9. **reposts**: The number of times the post was shared or reposted.
+   10. **num_comments**: The total number of comments under the post.
+   11. **autor_name**: Username or identifier of the post's author.
+   12. **autor_followers**: The number of followers the author had at the time of publication.
+   13. **autor_num_posts**: Total number of posts published by the author to date.
+   14. **net_type**: Type of platform where the post was published.
+   15. **bert_embedding**: Precomputed textual embeddings of the post's content, useful for analysis.
+
+9. **Missing Attribute Values**:
+   None detected in the provided dataset.
