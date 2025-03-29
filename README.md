@@ -10,7 +10,7 @@ An application with a cross-platform intelligent recommendation system based on 
 - Scalability: allows you to add additional networks to expand your recommendations
 - Flexibility: there's a possibility of sensitive adjustment and combination with other models (example: Caser or Bert4Rec)
 - Powerful Pipeline : the solution uses an ensemble of transformers, which allows you to give the most accurate recommendations
-- Expansion: we are aware of the frequent problems that exist in RecSys tasks, so we wrote the modular project code in advance so that we could later lug the .enhance module
+- Expansion: we are aware of the frequent problems that exist in RecSys tasks, so we wrote the modular project code in advance so that we could later plug the .enhance module
 
 
 ---
