@@ -19,16 +19,16 @@ An application with a cross-platform intelligent recommendation system based on 
 Inupt:
 | Comments |
 |--------------------------|
-| Absolutely wonderful - silky and sexy and comfortable |
-| I love, love, love this jumpsuit... |
-| This shirt is very flattering to all... |
+| Absolutely wonderful - silky and comfortable... |
+| I'm upset because for the price of the dress... |
+| Not a stranger to alterations, shortening and narrowing... |
 
 Output:
 | Comments | Emotion |
 |--------------------------|---------|
-| Absolutely wonderful - silky and sexy and comfortable | Joy |
-| I love, love, love this jumpsuit... | Joy |
-| This shirt is very flattering to all... | Love |
+| Absolutely wonderful - silky and comfortable... | Joy |
+| I love, love, love this jumpsuit... | Sadness |
+| This shirt is very flattering to all... | Surprise |
 
 
 ---
