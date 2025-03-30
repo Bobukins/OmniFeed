@@ -1,5 +1,5 @@
 #pip
-from fastapi import Depends, FastAPI, HTTPException, status, Request, Response
+from fastapi import Depends, FastAPI, HTTPException, status, Request, Response, Form
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from fastapi.middleware.cors import CORSMiddleware
 from datetime import datetime, timedelta
@@ -7,21 +7,24 @@ import jwt
 from passlib.context import CryptContext
 import uvicorn
 import uuid
+import json
 
 # Eternal files
 from config import *
 from entities import *
 from db import *
 
-
 #
-app = FastAPI(root_path="/")
+app = FastAPI()
 
 # TODO: develop a security policy afterwards for browser rendering
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"]
+    allow_origins=["*"],
     #allow_origins=["ручка до фронта"]
+    allow_credentials=True,
+    allow_methods=["*"],  # Разрешаем все методы (GET, POST, OPTIONS и т.д.)
+    allow_headers=["*"],  # Разрешаем любые заголовки
 )
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
@@ -90,9 +93,9 @@ def decode_refresh_token(token: str):
 
 
 #Routes
-@app.get("/")
+@app.get("/", tags=["Back-end"])
 async def root():
-    return {"success": True}
+    if()
 
 
 '''
@@ -114,7 +117,7 @@ async def cabinet(token: str = Depends(oauth2_scheme)):
 '''
 
 
-@app.get("/cabinet")
+@app.get("/cabinet", tags=["Back-end"])
 async def cabinet(request: Request, response: Response, token: str = Depends(oauth2_scheme)):
     username = decode_access_token(token)
 
@@ -146,7 +149,7 @@ async def cabinet(request: Request, response: Response, token: str = Depends(oau
     return user
 
 
-@app.post("/token", response_model=Token)
+@app.post("/token", response_model=Token, tags=["Back-end"])
 async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends()):
     user = authenticate_user(form_data.username, form_data.password)
     if not user:
@@ -164,6 +167,14 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
 
     return {"access_token": access_token, "refresh_token": refresh_token, "token_type": "bearer"}
 
+
+@app.get("/companies", response_model=List[Companies], tags=["Front-end"])
+async def companies_json(token: str = Depends(oauth2_scheme)):
+    return {}
+
+@app.get("/blogers", response_model=List[Blogers], tags=["Front-end"])
+async def blogers_json(token: str = Depends(oauth2_scheme)):
+    return {}
 
 """
 @app.get("/users/me")
@@ -183,7 +194,7 @@ async def read_users_me(token: str = Depends(oauth2_scheme)):
     return user
 """
 
-@app.get("/users/me")
+@app.get("/users/me", tags=["Back-end"])
 async def read_users_me(request: Request, response: Response, token: str = Depends(oauth2_scheme)):
     username = decode_access_token(token)
 
@@ -215,9 +226,53 @@ async def read_users_me(request: Request, response: Response, token: str = Depen
     return user
 
 
-@app.post("/logout")
-async def logout(refresh_data: RefreshTokenRequest):
-    # Проверяем, есть ли refresh токен в хранилище
+@app.get("search/blogers", tags=["Back-end", "Front-end"])
+async def search_blogers():
+    ...
+
+
+@app.get("search/companies", tags=["Back-end", "Front-end"])
+async def search_companies():
+    ...
+
+
+@app.post("/register/bloger", tags=["Back-end", "Front-end"])
+async def register_bloger(
+    domain: str = Form(),
+    email: str = Form(),
+    password: str = Form()
+):
+    pass
+
+
+@app.post("/register/company", tags=["Back-end", "Front-end"])
+async def register_company(
+    buisness_type: str = Form(),
+    email: str = Form(),
+    password: str = Form()
+):
+    pass
+
+
+@app.post("/login/company", tags=["Back-end", "Front-end"])
+async def login(
+    email: str = Form(),
+    password: str = Form()
+):
+    pass
+
+
+@app.post("/login/bloger", tags=["Back-end", "Front-end"])
+async def login(
+    email: str = Form(),
+    password: str = Form()
+):
+    pass
+
+
+@app.post("/logout", tags=["Back-end", "Front-end"])
+async def logout(refresh_data: RefreshTokenRequest, token: str = Depends(oauth2_scheme)):
+    # Проверяем, есть ли refresh токен в Redis
     if refresh_data.refresh_token not in refresh_tokens_store:
         raise HTTPException(status_code=401, detail="Invalid or expired refresh token")
 
@@ -227,7 +282,7 @@ async def logout(refresh_data: RefreshTokenRequest):
     return {"message": "Successfully logged out"}
 
 
-@app.get("/healthcheck")
+@app.get("/healthcheck", tags=["Back-end"],)
 async def healthcheck():
     return {"success": True}
 

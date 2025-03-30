@@ -11,6 +11,7 @@ services:
     depends_on:
       - client_server1
       - social_content_gate1
+      - pgadmin
     networks:
       - app-network
   postgres:
@@ -69,12 +70,37 @@ services:
           memory: 4G
     networks:
       - app-network
+    
+  pgadmin:
+    container_name: pgadmin_container
+    image: dpage/pgadmin4:9.1
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@example.com"
+      PGADMIN_DEFAULT_PASSWORD: "password"
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+      LANG: ru_RU.UTF-8
+      LC_ALL: ru_RU.UTF-8
+    #volumes:
+      #- pgadmin-data:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 1G
+    networks:
+      - app-network
+    depends_on:
+      postgres:
+        condition: service_healthy
   
   client_server1:
     container_name: ClientServer1
     build: ./ClientServer
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:1201/healthcheck"]
+      test: ["CMD", "curl", "-f", "http://localhost:8000/healthcheck"]
       interval: 10s
       timeout: 5s
       retries: 3
@@ -88,7 +114,7 @@ services:
     container_name: SocialContentGate1
     build: ./SocialContentGate
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:1204/healthcheck"]
+      test: ["CMD", "curl", "-f", "http://localhost:8000/healthcheck"]
       interval: 10s
       timeout: 5s
       retries: 3
