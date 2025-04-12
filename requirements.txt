@@ -1,0 +1,12 @@
+gpt4all~=2.8.2
+torch~=2.6.0+cu124
+whisper~=1.1.10
+torchaudio~=2.6.0
+numpy~=1.24.4
+soundfile~=0.13.1
+sounddevice~=0.5.1
+scipy~=1.13.1
+ruaccent~=1.5.8.3
+transformers~=4.49.0
+librosa~=0.11.0
+onnxruntime~=1.17.0
